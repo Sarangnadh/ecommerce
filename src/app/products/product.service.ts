@@ -28,7 +28,24 @@ viewProduct(ProductId:any){
 //api call to delete a single product
 deleteProduct(ProductId:any){
   const baseURL = "http://localhost:3000/products"+ProductId
-  return this.httpClient.get(baseURL)
+  return this.httpClient.delete(baseURL)
 }
+
+//api call for adding new product
+
+addProduct(productData:any){
+  const baseURL = "http://localhost:3000/products"
+  return this.httpClient.post(baseURL,productData)
+
+
+}
+
+
+//api call to update single product
+updateProduct(ProductId:any,ProductData:any){
+  const baseURL = "http://localhost:3000/products"+ProductId
+  return this.httpClient.put(baseURL,ProductData)
+}
+
 
 }

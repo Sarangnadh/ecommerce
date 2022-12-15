@@ -9,6 +9,7 @@ import { DeleteProductComponent } from './delete-product/delete-product.componen
 import { ViewProductComponent } from './view-product/view-product.component';
 import { ViewAllProductComponent } from './view-all-product/view-all-product.component';
 import { FilterPipe } from './pipe/filter.pipe';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -24,7 +25,9 @@ import { FilterPipe } from './pipe/filter.pipe';
   ],
   imports: [
     CommonModule,
-    ProductsRoutingModule
+    ProductsRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class ProductsModule { }

@@ -14,13 +14,14 @@ export class ViewProductComponent implements OnInit {
   constructor(private productService:ProductService,private activatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
-  this.activatedRoute.params.subscribe((data:any)=>{
-    // console.log(data)
-    this.productId=data['id']
-  })
-  this.productService.viewProduct(this.productId).subscribe((item:any)=>{
-    this.productData =item
-  })
+    this.activatedRoute.params.subscribe((data:any)=>{
+      console.log(data)
+      this.productId = data['id']
+    })
+
+this.productService.viewProduct(this.productId).subscribe((item:any)=>{
+  this.productData  =item
+})
   }
 
 }
